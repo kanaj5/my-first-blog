@@ -30,6 +30,13 @@
 </head>
 <body>
 <img src="C:\Users\Jo5h7\Desktop\djangogirls\blog\templates\blog\logo.jpeg", alt="Se mas", style="width:35%;">
+{% for post in posts %}
+<article>
+	<time>published:{{ post.published_date }}</time>
+	<h2><a href="">{{ post.title }}</a></h2>
+	<p>{{ post.text|linebreaksbr }}</p>
+</article>
+{% endfor %}
 <h3>Proyecto Para el apoyo estudiantil</h3>
 <P>Descripciones generales</P>
 </body>
